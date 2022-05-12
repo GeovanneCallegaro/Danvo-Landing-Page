@@ -1,9 +1,12 @@
 // Select the elements
 let toggle_btn;
 let big_wrapper;
+let hamburguer_menu;
+
 function declare() {
   toggle_btn = document.querySelector('.toggle-btn')
   big_wrapper = document.querySelector('.big-wrapper')
+  hamburguer_menu = document.querySelector('.hamburguer-menu')
 }
 
 const main = document.querySelector('main')
@@ -41,6 +44,9 @@ function toggleAnimation() {
 
 function events() {
   toggle_btn.addEventListener('click', toggleAnimation)
+  hamburguer_menu.addEventListener('click', () => {
+    big_wrapper.classList.toggle('active')
+  })
 }
 
 events()
